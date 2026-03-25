@@ -13,7 +13,7 @@ export function getSocket() {
 export function connectSocket(serverUrl) {
   if (socket?.connected) return socket;
 
-  socket = io(serverUrl || 'http://localhost:3001', {
+  socket = io(serverUrl || 'https://make-notes-33qd.onrender.com', {
     transports: ['polling', 'websocket'], // Start with HTTP polling, then upgrade
     rememberUpgrade: true,
     reconnection: true,

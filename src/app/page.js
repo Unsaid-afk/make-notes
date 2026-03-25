@@ -16,8 +16,8 @@ const EMOJI_CATEGORIES = {
 };
 
 const SUGGESTED_SERVERS = [
+  { name: 'Production', url: 'https://make-notes-33qd.onrender.com' },
   { name: 'Local (Dev)', url: 'http://localhost:3001' },
-  { name: 'Deployment (Beta)', url: 'https://golgappa-server.onrender.com' },
 ];
 
 // ═══ Fake Doc Content ═══
@@ -73,7 +73,7 @@ export default function Home() {
   const [burnTimer, setBurnTimer] = useState(60);
   const [burnEnabled, setBurnEnabled] = useState(true);
   const [inputMasked, setInputMasked] = useState(false);
-  const [serverUrl, setServerUrl] = useState('http://localhost:3001');
+  const [serverUrl, setServerUrl] = useState('https://make-notes-33qd.onrender.com');
 
   // Refs
   const messagesEndRef = useRef(null);
