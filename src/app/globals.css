@@ -1467,16 +1467,26 @@ html, body {
   /* Body — edge-to-edge */
   .gdocs-body {
     margin-top: 110px;
-    height: calc(100vh - 110px);
+    height: calc(100dvh - 110px);
     padding: 0;
   }
 
   .gdocs-page {
     width: 100%;
-    padding: 16px 12px;
-    min-height: calc(100vh - 110px);
+    padding: 16px 12px 12px 12px;
+    height: calc(100dvh - 110px);
+    display: flex;
+    flex-direction: column;
     box-shadow: none;
     border-radius: 0;
+    overflow: hidden;
+  }
+  
+  .chat-container.active {
+    display: flex;
+    flex: 1;
+    height: 100%;
+    min-height: 0; /* Prevents flex blowout */
   }
 
   /* Fake doc content */
